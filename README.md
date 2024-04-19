@@ -1,4 +1,8 @@
 # Edge-Tweaker
+Update Log 1:
+
+Add Enable/Disable Edge Update Services
+
 Enhance your privacy and improve edge's performance with this simple batch file.
 
 ![image](https://github.com/LunarXMike/Edge-Tweaker/assets/158159992/1fe252ed-ecf9-4f95-969a-1e60e263ce9d)
