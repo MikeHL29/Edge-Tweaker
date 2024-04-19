@@ -54,6 +54,7 @@ echo.          11: Disable Smart Screen Filter
 echo.          12: Disable Feedback
 echo.          13: Disable Web Widget
 echo.          14: Stop Edge Auto Import
+echo.          15: Stop Edge Spdate Service
 echo.           X: Go Back
 echo.
 echo.         ===================================
@@ -72,6 +73,7 @@ IF %AREYOUSURE%==11 GOTO ssf
 IF %AREYOUSURE%==12 GOTO fed
 IF %AREYOUSURE%==13 GOTO webwig
 IF %AREYOUSURE%==14 GOTO sautoimp
+IF %AREYOUSURE%==15 GOTO eupdis
 IF %AREYOUSURE%==X GOTO back
 IF %AREYOUSURE%==x GOTO back
 
@@ -100,6 +102,7 @@ echo.          11: Enable Smart Screen Filter
 echo.          12: Enable Feedback
 echo.          13: Enable Web Widget
 echo.          14: Start Edge Auto Import
+echo.          15: Start Edge Update Services
 echo.           X: Go Back
 echo.
 echo.          ===================================
@@ -119,6 +122,7 @@ IF %AREYOUSURE%==11 GOTO ressf
 IF %AREYOUSURE%==12 GOTO refed
 IF %AREYOUSURE%==13 GOTO rewebwig
 IF %AREYOUSURE%==14 GOTO resautoimp
+IF %AREYOUSURE%==15 GOTO eupen
 IF %AREYOUSURE%==X GOTO back
 IF %AREYOUSURE%==x GOTO back
 
@@ -438,6 +442,30 @@ Echo.1
 timeout /t 1 /nobreak > nul
 goto revents
 
+:eupdis
+cls
+sc config "MicrosoftEdgeElevationService" start=disable
+sc config "edgeupdate" start=disabled
+sc config "edgeupdatem" start=disabled
+cls
+echo.
+Echo.2
+timeout /t 1 /nobreak > nul
+Echo.1
+timeout /t 1 /nobreak > nul
+goto tweaks
 
+:eupen
+cls
+sc config "MicrosoftEdgeElevationService" start=demand
+sc config "edgeupdate" start=demand
+sc config "edgeupdatem" start=demand
+cls
+echo.
+Echo.2
+timeout /t 1 /nobreak > nul
+Echo.1
+timeout /t 1 /nobreak > nul
+goto revents
 
 
