@@ -76,7 +76,7 @@ IF %AREYOUSURE%==14 GOTO sautoimp
 IF %AREYOUSURE%==15 GOTO eupdis
 IF %AREYOUSURE%==X GOTO back
 IF %AREYOUSURE%==x GOTO back
-
+goto tweaks
 
 :revents
 @echo off
@@ -125,6 +125,7 @@ IF %AREYOUSURE%==14 GOTO resautoimp
 IF %AREYOUSURE%==15 GOTO eupen
 IF %AREYOUSURE%==X GOTO back
 IF %AREYOUSURE%==x GOTO back
+goto revents
 
 :aep
 cls
