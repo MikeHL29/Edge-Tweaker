@@ -1,7 +1,7 @@
 # Edge-Tweaker
-Update Log 1:
+Update:
 
-Add Enable/Disable Edge Update Services
+Pls use WinareoTweaker for more tweaks
 
 Enhance your privacy and improve edge's performance with this simple batch file.
 
